@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import PostCard from "../components/PostCard";
 import { getAllPosts, getFeaturedPosts } from "../lib/posts";
+=======
+import PostCard from "@/components/PostCard";
+import { getAllPosts, getFeaturedPosts } from "@/lib/posts";
+>>>>>>> cca40ab59172cd3464c54b2028437ba1aaf1bada
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Target, Users, BookOpen } from "lucide-react";
