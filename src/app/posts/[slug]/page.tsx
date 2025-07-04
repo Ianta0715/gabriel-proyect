@@ -4,14 +4,13 @@ import { Calendar, User, Clock, ArrowLeft, Share2 } from 'lucide-react'
 import Link from 'next/link'
 import PostCard from '@/components/PostCard'
 
-interface PostPageProps {
-  params: {
-    slug: string
-  }
-}
+type PostPageProps = {
+  params: Promise<{ slug: string }>;
+};
 
-export default function PostPage({ params }: PostPageProps) {
-  const post = getPostBySlug(params.slug)
+export default async function PostPage({ params }: PostPageProps) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug)
   
   if (!post) {
     notFound()
